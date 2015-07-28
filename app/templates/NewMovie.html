@@ -1,0 +1,38 @@
+  <style>input.ng-invalid.ng-dirty {
+    background-color: red
+  }</style>
+
+
+  <div>
+    <div class="container">
+      <h1>New Movie</h1>
+      <hr/>
+      <form name="newMovieForm">
+        <fieldset>
+          <label for="movieName">Movie Name:</label>
+          <input id="movieName" type="text" required ng-model="show.movieName" placeholder="Enter Movie Name"/>
+          <label for="movieDate">Movie Date:</label>
+          <input id="movieDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="show.movieDate"
+                 placeholder="Enter Movie Date"/>
+          <label for="movieTime">Movie Time:</label>
+          <input id="movieTime" type="text" required ng-model="show.movieTime" placeholder="Enter Movie Time"/>
+          <label for="movieLocation">Movie Location:</label>
+          <input id="movieLocation" type="text" required ng-model="show.movieLocation"
+                 placeholder="Enter Movie Location"/>
+          <br><br>
+          <input id="showCity" type="text" required class="input-medium" ng-model="show.showCity" placeholder="City"/>
+          <label for="movieImageURL">Image:</label>
+          <input id="movieImageURL" type="url" class="input-xlarge" ng-model="show.movieImageURL"
+                 placeholder="Movie Image Url"/>
+        </fieldset>
+        <img ng-src="{{show.movieImageURL}}"/>
+        <br><br>
+        <button type="submit" ng-disabled="newMovieForm.$invalid" ng-click="save(show,newMovieForm)"
+                class="btn btn-success">Post Movie
+        </button>
+        <button type="button" ng-click="cancel()" class="btn btn-danger">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>
+

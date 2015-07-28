@@ -1,0 +1,40 @@
+{"name": "Movies Review",
+            "id": 1,
+            "date": "1/1/2013",
+            "time": "10:30 am",
+            "location": {
+                "address": "IMAX",
+                "city": "Bangalore",
+                "province": "KA"
+            },
+            "imageUrl": "img/movie-background.jpg",
+            "movies": [
+                {
+					"id": 1,
+                    "name": "Godzilla",
+                    "directorName": "Gareth Edwards",
+                    "duration": 2,
+                    "about": "This movie is about Godzilla!",
+                    "voteCount": 10,
+                    "price":150
+                },
+                {
+					"id": 2,
+                    "name": "Avatar",
+                    "directorName": "James Cameron",
+                    "duration": 3,
+                    "about": "This is a science fiction movie with cool 3D and animations.",
+                    "voteCount": 15,
+                    "price":250
+                },
+                {
+					"id": 3,
+                    "name": "Titanic",
+                    "directorName": "James Cameron",
+                    "duration": 2,
+                    "about": "This movie is about great Titanic Ship.",
+                    "voteCount": 20,
+                    "price":350
+                }
+            ]
+        }

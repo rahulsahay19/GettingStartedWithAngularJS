@@ -1,0 +1,16 @@
+{
+  "name": "Movie Review",
+  "id": 2,
+  "date": "1/6/2014",
+  "time": "10:30 am",
+  "location": {
+    "address": "IMAX",
+    "city": "Bangalore",
+    "province": "KA"
+  },
+  "imageUrl": "img/avatar.jpg",
+  "directorName": "James Cameron",
+  "releaseYear": "2009",
+  "rating":"5",
+  "reviews":"400"
+}

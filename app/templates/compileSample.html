@@ -1,0 +1,104 @@
+<html lang="en" ng-app="moviesApp">
+<head>
+  <meta charset="utf-8">
+  <title>Movie Review</title>
+  <link rel="stylesheet" href="css/bootstrap.superhero.min.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+
+</head>
+<body>
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <ul class="nav">
+        <li><a href="MovieDetails.html">Movie Details</a></li>
+        <li><a href="NewMovie.html">Post New Movie</a></li>
+        <li><a href="EditUser.html">Edit profile</a></li>
+        <li><a href="cachePage.html">Cache Demo</a></li>
+        <li><a href="compileSample.html">Activities</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" ng-controller="compileSample" style="align-items: center;padding-left: 300px;">
+  <h1>Compile Service</h1>
+  <hr/>
+  <div class="container-fluid" style="padding: 20px;">
+    <table class="table-bordered">
+      <tr>
+        <td>
+          <div id="attachHere"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Your Wish: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="name"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          My Command: <input type="text" ng-model="element"/> <br/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn btn-success" ng-click="attachDiv(element)">Attach</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="container-fluid" ng-controller="localeController" style="align-items: center;padding-left: 300px;">
+  <h1>Locale Demo</h1>
+  <hr/>
+  Price:- {{price | currency}}
+  Time:- {{date | date:'fullDate' }}
+  <div class="container-fluid" style="padding: 20px;">
+    <table class="table-bordered">
+
+    </table>
+  </div>
+</div>
+
+<div class="container-fluid" ng-controller="filterController" style="align-items: center;padding-left: 300px;">
+  <h1>Filter Demo</h1>
+  <hr/>
+  <ul>
+    <li>{{show.first}}</li>
+    <li>{{show.second}}</li>
+    <li>{{show.third}}</li>
+  </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <ul class="nav">
+        <li><span class="pull-right text-info credit">Movie Review - &copy; <a href="http://rahulsahay.com"
+                                                                               target="_blank">Rahul Sahay</a></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="lib/jquery.min.js"></script>
+<script src3="lib/underscore-1.4.4.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-sanitize.js"></script>
+<script src="lib/angular/angular-resource.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services/cacheFactoryService.js"></script>
+<script src="js/controllers/cacheController.js"></script>
+<script src="js/controllers/compileSample.js"></script>
+<script src="js/controllers/localeController.js"></script>
+<!--<script src="lib/angular/angular-locale_hi-in.js"></script>-->
+<!--<script src="js/services/exceptionHandlerService.js"></script>-->
+<script src="js/filters.js"></script>
+<script src="js/controllers/filterController.js"></script>
+</body>
+</html>

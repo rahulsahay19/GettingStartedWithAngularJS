@@ -1,0 +1,64 @@
+/* app css stylesheet */
+.hoverwell:hover {
+  background-color: #52575c;
+  cursor: pointer;
+}
+select, textarea {
+  color: #52575c;
+}
+
+.show-title {
+  margin-top: 0px;
+}
+.show {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.votingWidget {
+  height: 64px;
+  padding: 7px;
+}
+
+.votingButton {
+  padding-left:6px;
+  cursor:pointer;
+}
+
+[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{
+    display: none;
+}
+.red{
+    color: red;
+}
+
+/* Wrapper for page content to push down footer */
+#applicationHost {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+    /* Pad bottom by footer height
+    padding: 0 0 90px; */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* Set the fixed height of the footer here */
+#footer {
+    height: 60px;
+     background-color: #f5f5f5;
+}
+.container {
+    width: auto;
+    max-width: 900px;
+    padding: 0 15px;
+}
+
+.container .credit {
+    margin: 20px 0;
+}

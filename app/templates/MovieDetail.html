@@ -1,0 +1,52 @@
+<div>
+  <header>
+    <div class="header-content">
+      <div class="header-content-inner">
+
+        <h1>Getting Started with Angular JS</h1>
+        <hr>
+        <p>Learn Live with examples how to get started with Angular JS with complete demo</p>
+        <img ng-src="{{show.imageUrl}}" alt="{{show.name}}" style="width:1000px;height: 300px;"/>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="row">
+
+    <div class="span11">
+      <h2> {{show.name | uppercase}}</h2>
+    </div>
+
+  </div>
+  <hr/>
+
+  <div class="row">
+    <div class="span3">
+      <div><strong>Date:- {{show.date | date:'short'}}</strong></div>
+      <div><strong>Time:- {{show.time}}</strong></div>
+    </div>
+    <div class="span4">
+      <address>
+        <strong>Address:</strong><br/>
+        {{show.location.address}}<br/>
+        {{show.location.city}},{{event.location.province}}
+      </address>
+    </div>
+  </div>
+  <hr/>
+    <div class="row">
+    <div class="span3">
+      <div><strong>Director:- {{show.directorName }}</strong></div>
+      <div><strong>Release Year:- {{show.releaseYear }}</strong></div>
+    </div>
+    <div class="span4">
+      <div><strong>Rating:- {{show.rating }}</strong></div>
+      <div><strong>Reviews:- {{show.reviews }}</strong></div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+<br />

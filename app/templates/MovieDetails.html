@@ -1,0 +1,75 @@
+<div>
+  <header>
+    <div class="header-content">
+      <div class="header-content-inner">
+
+        <h1>Getting Started with Angular JS</h1>
+        <hr>
+        <p>Learn Live with examples how to get started with Angular JS with complete demo</p>
+        <img ng-src="{{show.imageUrl}}" alt="{{show.name}}" style="width:1000px;height: 300px;"/>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="row">
+
+    <div class="span11">
+      <h2> {{show.name | uppercase}}</h2>
+    </div>
+
+  </div>
+  <br/>
+
+
+  <div class="row">
+    <div class="span3">
+      <div><strong>{{show.date | date:'short'}}</strong></div>
+      <div><strong>{{show.time}}</strong></div>
+    </div>
+    <div class="span4">
+      <address>
+        <strong>Address:</strong><br/>
+        {{show.location.address}}<br/>
+        {{show.location.city}},{{event.location.province}}
+      </address>
+    </div>
+  </div>
+  <hr/>
+  <h3>Movies</h3>
+  Sort Movies:
+  <select ng-model="sortMovie" class="input-medium">
+    <option selected value="name">By Movie Name</option>
+    <option value="-voteCount">By Vote</option>
+  </select>
+  <ul class="thumbnails">
+    <li ng-repeat="movie in show.movies | orderBy:sortMovie">
+      <a href="#/show/{{movie.id}}">
+
+        <div class="row show">
+          <div class="span0 well votingWidget">
+            <div class="votingButton" ng-click="upVotemMovie(movie)">
+              <i class="icon-chevron-up icon-white"></i>
+            </div>
+            <div class="badge badge-inverse">
+              <div>{{movie.voteCount}}</div>
+            </div>
+            <div class="votingButton" ng-click="downVotemMovie(movie)">
+              <i class="icon-chevron-down icon-white"></i>
+            </div>
+          </div>
+          <div class="well span9">
+            <h4 class="show-title">{{movie.name}}</h4>
+            <h6 style="margin-top: -10ox;">Director: {{movie.directorName}}</h6>
+            <span>Duration: {{movie.duration}} </span><br/>
+            <span>Price: {{movie.price | rupeesFilter }} </span>
+
+            <p>About: {{movie.about}}</p>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+
