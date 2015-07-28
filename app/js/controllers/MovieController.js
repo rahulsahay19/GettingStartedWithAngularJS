@@ -4,9 +4,16 @@
 
 'use strict';
 
-moviesApp.controller('MovieController', function MovieController($scope, movieDataService, $log) {
+moviesApp.controller('MovieController', function MovieController($scope, movieDataService, $log,$location) {
 
   $scope.sortMovie = 'name';
+  //location service in action
+  $log.info('protocol:- '+$location.protocol());
+  $log.info('port:- '+$location.port());
+  $log.info('host:- '+$location.host());
+  $log.info('path:- '+$location.path());
+  $log.info('url:- '+$location.url());
+
   //Success Call
   movieDataService.getshows().$promise.then(function (show) {
     $scope.show = show;

@@ -1,6 +1,6 @@
-# Angular Movie Review — Skeleton App for building full fledged Angular JS app.
+# Angular Movie Review — Finished Project, building full fledged Angular JS app.
 
-Note:- Coding not finished yet. Still in progress. You can experience some intermittent issues.
+### Note:- Coding not finished yet. Still in progress. You can experience some intermittent issues.
 
 This project is a sample movie review application demonstrating a more fully developed realistic single page
 angular application.
@@ -25,4 +25,5 @@ Thanks for joining me.
 
 Happy Coding
 Rahul Sahay
+
 http://myview.rahulnivi.net

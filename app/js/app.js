@@ -14,9 +14,22 @@ var moviesApp = angular.module('moviesApp', ['ngResource','ngRoute'])
       templateUrl:'templates/MovieDetails.html',
       controller: 'MovieController'
     });
+    $routeProvider.when('/EditUser',{
+      templateUrl:'templates/EditUser.html',
+      controller: 'EditUserController'
+    });
+    $routeProvider.when('/cachePage',{
+      templateUrl:'templates/cachePage.html',
+      controller: 'cacheController'
+    });
+    /*$routeProvider.when('/compileSample',{
+      templateUrl:'templates/compileSample.html',
+      controller: 'compileSample'
+    });*/
     $routeProvider.when('/show/:id',{
       templateUrl:'templates/MovieDetail.html',
       controller: 'MovieDetailController'
     });
+    $routeProvider.otherwise({templateUrl: 'templates/errorPage.html'});
   });
 
