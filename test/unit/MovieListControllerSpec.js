@@ -1,23 +1,25 @@
 'use strict';
 
-describe('EventListController', function() {
-  var scope, $controllerConstructor, mockEventData;
+describe('MovieController', function() {
+  var scope,$controllerConstructor,mockMoviesData;
 
-  beforeEach(module("eventsApp"));
+  //Inject the module
+  beforeEach(module("moviesApp"));
+  //Inject the controller dependency here
+  beforeEach(inject(function($controller,$rootScope){
+    scope=$rootScope.$new();
+    mockMoviesData=sinon.stub({getshows:function(){}});
+    $controllerConstructor=$controller;
 
-  beforeEach(inject(function($controller, $rootScope) {
-    scope = $rootScope.$new();
-    mockEventData = sinon.stub({getAllEvents: function() {}});
-    $controllerConstructor = $controller;
   }));
+  //Setting the rule here
+  it('should set the scope.show', function () {
+    //fake movies object
+    var mockMovies={};
 
-  it('should stuff', function() {
-    var mockEvents = {};
-    mockEventData.getAllEvents.returns(mockEvents);
-
-    var ctrl = $controllerConstructor("MovieListController",
-        {$scope: scope, $location: {}, eventData: mockEventData});
-
-    expect(scope.events).toBe(mockEvents);
+    mockMoviesData.getshows.returns(mockMovies);
+    var ctrl = $controllerConstructor("MovieController",{$scope:scope,movieDataService:mockMoviesData});
+    //setting expectation here
+    expect(scope.show).toBe(mockMovies);
   })
 })
