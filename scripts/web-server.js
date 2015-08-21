@@ -2,7 +2,6 @@
 
 /**
  * web-server.js Borrowed from angularjs.org tutorial
- * modified to allow posting
  */
 
 var util = require('util'),
