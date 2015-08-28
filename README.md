@@ -1,7 +1,5 @@
 # Angular Movie Review — Finished Project, building full fledged Angular JS app.
 
-### Note:- Coding not finished yet. Still in progress. You can experience some intermittent issues.
-
 This project is a sample movie review application demonstrating a more fully developed realistic single page
 angular application.
 
